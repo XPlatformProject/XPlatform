@@ -1,0 +1,3 @@
+[submodule "XPlatform.core"]
+	path = XPlatform.core
+	url = https://github.com/XPlatformProject/XPlatform.core.git
