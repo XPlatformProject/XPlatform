@@ -3,5 +3,5 @@ project("XPlatfrom")
 
 include("CMake/xplatform.cmake")
 
-add_subdirectory("XPlatfrom.core")
+add_subdirectory("XPlatform.core")
 
