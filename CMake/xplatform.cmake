@@ -4,7 +4,7 @@ add_custom_command(
         TARGET ${target} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 $<TARGET_FILE:${dependence}>
-                $<TARGET_FILE_DIR:${target}>/${dependence}.dll)
+                $<TARGET_FILE_DIR:${target}>/${dependence})
 
 add_dependencies(${target} ${dependence})
 endfunction(xplatform_add_dependence)
@@ -15,7 +15,7 @@ add_custom_command(
         TARGET ${target} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 $<TARGET_FILE:${dependence}>
-                $<TARGET_FILE_DIR:${target}>/Engine)
+                $<TARGET_FILE_DIR:${target}>/Engine/${dependence}.dll)
 
 add_dependencies(${target} ${dependence})
 endfunction(xplatform_add_dependence_module)
