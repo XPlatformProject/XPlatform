@@ -30,3 +30,14 @@ add_custom_command(
 )
 
 endfunction(xplatform_copy_file)
+
+function(xplatform_copy_folder target in_path out_path)
+
+add_custom_command(
+        TARGET ${target} COMMAND PRE_BUILD
+         ${CMAKE_COMMAND} -E copy_directory
+                ${in_path}
+                ${out_path}
+)
+
+endfunction(xplatform_copy_folder)
